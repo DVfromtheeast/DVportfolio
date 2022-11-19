@@ -36,7 +36,7 @@ button{
     text-align: center;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 20px;
     letter-spacing: 0.5px;
     flex: none;
@@ -86,8 +86,13 @@ header{
     background-color:var(--darksurface);
     z-index: 5;
     transition: var(--smooth);
-    /* transform: translateX(100%);
-    opacity: 0; */
+    transform: translateX(100%);
+    opacity: 1;
+}
+.navbar_links.navbar_open{
+    transform: translateX(0);
+    opacity: 1;
+    transition: var(--smooth);
 }
 .link{
     list-style: none;
@@ -97,7 +102,7 @@ header{
     text-decoration: none;
     color: var(--ondarksurface);
     font-weight: 600;
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 36px;
     display:inline-block;
     position: relative;
@@ -119,15 +124,47 @@ header{
   transform-origin: bottom right;
   transition: var(--smooth);
 }
-
 .language{
     margin: 0px 20px;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 0.5px;
     line-height: 20px;
     text-decoration: none;
     color: var(--onlightbg);
+}
+/* menu_icon */
+.navbar_icon1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: var(--smooth);
+    z-index: 6;
+}
+/* icon2 */
+.navbar_icon2{
+    width: 32px;
+    height: 4px;
+    background-color: var(--onlightbg);
+    transition: var(--smooth);
+    position: relative;
+}
+.navbar_icon2:before,.navbar_icon2:after{
+    content:'';
+    position: absolute;
+    width: 32px;
+    height: 4px;
+    background-color: var(--onlightbg);
+    transition: var(--smooth);
+}
+.navbar_icon2:before{
+    transform: translateY(-8px);
+}
+.navbar_icon2:after{
+    transform: translateY(8px);
 }
 
