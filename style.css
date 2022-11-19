@@ -4,13 +4,16 @@
     box-sizing: border-box;
 }
 :root{
-    --primary:#FF4A57;
+    --primary:#ff4a57;
     --onprimary:#fafafa;
-    --lightbg:#FAFAFA;
+    --lightbg:#fafafa;
     --onlightbg:#020216;
     --lightsurface:#f4f3fa;
-    --onlightsurface:#25233A;
+    --onlightsurface:#25233a;
     --field:#e0e0ef;
+    --darksurface:#090822;
+    --ondarksurface:#e0e0ef;
+    --smooth: all .3s ease-in;
 }
 html{
     scroll-behavior: smooth;
@@ -26,5 +29,105 @@ img{
     max-width: 1040px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 16px;
 }
+/* button */
+button{
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    color: var(--onprimary);
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 0.875rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+    transition: var(--smooth);
+    border: none;
+}
+button:hover{
+    background-color:#ff4a57;
+    transition: var(--smooth);
+}
+/* header */
+header{
+    position:absolute;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+}
+/* logo */
+.header_logo img{
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+/* links */
+.navbar_links{
+    position: fixed;
+    padding: 104px 56px;
+    top: 0;
+    right:0;
+    width: 80%;
+    height: 100%;
+    background-color:var(--darksurface);
+    z-index: 5;
+    transition: var(--smooth);
+    /* transform: translateX(100%);
+    opacity: 0; */
+}
+.link{
+    list-style: none;
+    margin: 24px 0px;
+}
+.link a{
+    text-decoration: none;
+    color: var(--ondarksurface);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    display:inline-block;
+    position: relative;
+}
+.link a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--ondarksurface);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+.link a:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom right;
+  transition: var(--smooth);
+}
+
+.language{
+    margin: 0px 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    text-decoration: none;
+    color: var(--onlightbg);
+}
+
