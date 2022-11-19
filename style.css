@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary:#FF4A57;
+    --onprimary:#fafafa;
+    --lightbg:#FAFAFA;
+    --onlightbg:#020216;
+    --lightsurface:#f4f3fa;
+    --onlightsurface:#25233A;
+    --field:#e0e0ef;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+img{
+    max-width: 100%;
+    width: 100%;
+}
+.container{
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
