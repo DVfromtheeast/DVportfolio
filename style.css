@@ -61,11 +61,19 @@ header {
   position: absolute;
   width: 100%;
 }
+footer {
+  position: absolute;
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px;
+  background-color: var(--onlightsurface);
+}
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
+  padding: 16px 0;
 }
 /* logo */
 .header_logo img {
@@ -191,27 +199,19 @@ header {
   display: flex;
   align-items: center;
 }
-.illustration {
-  display: block;
-  position: absolute;
-  margin: 0 auto;
-  width: 100%;
-  top: 4.5rem;
-  z-index: -1;
-}
 .banner_text {
   position: absolute;
   max-width: 100%;
-  margin: 4px auto;
+  margin: 4px 16px 4px 0px;
   text-align: left;
-  top: 25rem;
+  bottom: 2.5rem;
 }
 .banner_text h1 {
   font-size: 3rem;
   font-weight: 600;
   line-height: 3.75rem;
   letter-spacing: -0.5px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   color: var(--onlightbg);
 }
 .banner_text p {
@@ -222,6 +222,22 @@ header {
   margin-bottom: 32px;
   color: var(--onlightbg);
 }
+.illustration {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  top: 5.5rem;
+  z-index: -1;
+}
+.dec {
+  position: absolute;
+  width: 40rem;
+  top: 0rem;
+  right: 0rem;
+  z-index: -2;
+}
+
 /* desktop */
 @media (min-width: 62em) {
   .navbar_links {
@@ -250,5 +266,37 @@ header {
   }
   .navbar_icon1 {
     display: none;
+  }
+  .banner_text {
+    max-width: 27rem;
+    margin: 0;
+    text-align: initial;
+    top: 18rem;
+  }
+  .banner_text h1 {
+    font-size: 4.25rem;
+    font-weight: 600;
+    line-height: 5rem;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  .banner_text p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+  }
+  .illustration {
+    width: 56%;
+    top: 12rem;
+    right: -2rem;
+  }
+  .dec {
+    position: absolute;
+    width: 55rem;
+    top: 0rem;
+    right: 0rem;
+    z-index: -2;
   }
 }
