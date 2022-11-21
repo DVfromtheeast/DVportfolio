@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --primary: #ff4a57;
+  --primary: #3db20f;
   --onprimary: #fafafa;
   --lightbg: #fafafa;
   --onlightbg: #020216;
@@ -20,6 +20,23 @@ html {
 }
 body {
   font-family: "Be Vietnam Pro", sans-serif;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3.75rem;
+  letter-spacing: -0.5px;
+}
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 2.25rem;
+}
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.5px;
 }
 img {
   max-width: 100%;
@@ -53,21 +70,13 @@ button {
   border: none;
 }
 button:hover {
-  background-color: #ff4a57;
+  background-color: #3bec0f;
   transition: var(--smooth);
 }
 /* header */
 header {
   position: absolute;
   width: 100%;
-}
-footer {
-  position: absolute;
-  max-width: 1040px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 24px 16px;
-  background-color: var(--onlightsurface);
 }
 .navbar {
   display: flex;
@@ -207,18 +216,10 @@ footer {
   bottom: 2.5rem;
 }
 .banner_text h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 3.75rem;
-  letter-spacing: -0.5px;
   margin-bottom: 20px;
   color: var(--onlightbg);
 }
 .banner_text p {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.5px;
   margin-bottom: 32px;
   color: var(--onlightbg);
 }
@@ -227,7 +228,7 @@ footer {
   position: absolute;
   margin: 0 auto;
   width: 100%;
-  top: 5.5rem;
+  top: 6rem;
   z-index: -1;
 }
 .dec {
@@ -237,9 +238,63 @@ footer {
   right: 0rem;
   z-index: -2;
 }
-
+/* footer */
+footer {
+  background-color: var(--onlightsurface);
+}
+.footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center;
+  max-width: 1040px;
+  height: 40vh;
+  padding: 1rem 1rem 0 1rem;
+}
+.footer_logo {
+  top: 0;
+  margin: 1.5rem auto 1.5rem 0;
+}
+.footer_text {
+  margin-bottom: 24px;
+  color: var(--ondarksurface);
+  top: 40%;
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+.footer_text h3 {
+  margin-bottom: 4px;
+}
+.footer_social {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  width: 100%;
+  height: fit-content;
+}
+.footer_social a {
+  color: var(--ondarksurface);
+}
 /* desktop */
 @media (min-width: 62em) {
+  h1 {
+    font-size: 4.25rem;
+    font-weight: 600;
+    line-height: 5rem;
+    letter-spacing: -1px;
+  }
+  h3 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
+  p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+  }
   .navbar_links {
     position: initial;
     transform: translateX(0);
@@ -274,17 +329,9 @@ footer {
     top: 18rem;
   }
   .banner_text h1 {
-    font-size: 4.25rem;
-    font-weight: 600;
-    line-height: 5rem;
-    letter-spacing: -1px;
     margin-bottom: 24px;
   }
   .banner_text p {
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.5px;
     margin-bottom: 40px;
   }
   .illustration {
@@ -298,5 +345,28 @@ footer {
     top: 0rem;
     right: 0rem;
     z-index: -2;
+  }
+  footer {
+    background-color: var(--onlightsurface);
+  }
+  .footer {
+    position: relative;
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    max-width: 1040px;
+    height: 40vh;
+    padding: 4rem 0 0 0;
+    margin: 0 auto;
+  }
+  .footer_logo {
+    margin: 1.5rem 1.5rem 1.5rem 0;
+  }
+  .footer_text {
+    margin: 0 0 0 0;
+  }
+  .footer_social {
+    width: 24rem;
+    margin: 0 0 0 20%;
   }
 }
