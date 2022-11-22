@@ -21,6 +21,7 @@ html {
 body {
   font-family: "Be Vietnam Pro", sans-serif;
 }
+/* typeface */
 h1 {
   font-size: 3rem;
   font-weight: 600;
@@ -37,6 +38,18 @@ p {
   font-weight: 400;
   line-height: 1.25rem;
   letter-spacing: 0.5px;
+}
+/* overlay */
+#overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+  display: none;
+}
+#overlay.show {
+  display: initial;
 }
 img {
   max-width: 100%;
@@ -191,13 +204,16 @@ header {
 }
 /* icon animation */
 .open .navbar_icon2 {
+  position: fixed;
   background: transparent;
 }
 .open .navbar_icon2:before {
+  position: fixed;
   transform: rotate(45deg);
   background: var(--ondarksurface);
 }
 .open .navbar_icon2:after {
+  position: fixed;
   transform: rotate(-45deg);
   background: var(--ondarksurface);
 }
@@ -360,7 +376,7 @@ footer {
     margin: 0 auto;
   }
   .footer_logo {
-    margin: 1.25rem 1.25rem 1.25rem 0;
+    margin: 1.25rem 1.25rem 1.25rem 0.5rem;
   }
   .footer_text {
     margin: 0 0 0 0;
