@@ -14,4 +14,10 @@ overlay.addEventListener("click", () => {
   menuButton.classList.toggle("open");
   overlay.classList.toggle("show");
 });
+
 // Switches
+var icon = document.getElementById("icon");
+
+icon.onclick = function () {
+  document.body.classList.toggle("dark-theme");
+};
