@@ -16,8 +16,24 @@ overlay.addEventListener("click", () => {
 });
 
 // Switches
-var icon = document.getElementById("icon");
+var slider = document.getElementById("slider");
+var illustration = document.getElementById("illustration");
 
-icon.onclick = function () {
+let localData = localStorage.getItem("theme");
+if (localData == "light") {
+  illustration.src = "./images/day.png";
+  document.body.classList.remove("dark-theme");
+} else if (localData == "dark") {
+  illustration.src = "./images/night.png";
+  document.body.classList.add("dark-theme");
+}
+slider.onclick = function () {
   document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    illustration.src = "./images/night.png";
+    localStorage.setItem("theme", "dark");
+  } else {
+    illustration.src = "./images/day.png";
+    localStorage.setItem("theme", "light");
+  }
 };

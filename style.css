@@ -182,7 +182,7 @@ header {
 }
 
 /* theme_switch */
-#icon {
+#slider {
   cursor: pointer;
   z-index: 1;
 }
@@ -220,8 +220,8 @@ header {
 }
 .material-icons {
   position: absolute;
-  font-size: 20px;
-  align-items: center;
+  top: 6px;
+  font-size: 16px;
   z-index: 1;
 }
 input:checked + .slider {
@@ -235,7 +235,6 @@ input:checked + .slider:before {
   background-color: #e0e0ef;
 }
 .dark {
-  top: 6px;
   right: 6px;
   color: #25233a;
 }
