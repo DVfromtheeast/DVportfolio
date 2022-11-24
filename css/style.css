@@ -446,12 +446,13 @@ footer {
 /* other pages */
 .content {
   position: relative;
-  height: 100vh;
-  padding-top: 9rem;
+  height: fit-content;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  gap: 3rem;
+  gap: 4rem;
+  padding: 9rem 0 9rem 0;
 }
 .tittle {
   top: 9rem;
@@ -467,6 +468,7 @@ footer {
   height: 2.75rem;
   width: 4px;
   background-color: var(--primary);
+  border-radius: 8px;
 }
 /* About me */
 .info {
@@ -490,10 +492,38 @@ footer {
   gap: 2.25rem;
 }
 .card {
-  display: block;
-  width: 54rem;
-  height: 22.5rem;
-  background: #7930b1;
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  align-items: flex-start;
+  color: var(--onprimary);
+  gap: 1.25rem;
+  flex-direction: column-reverse;
+}
+.card_text {
+  display: flex;
+  gap: 1.25rem;
+  flex-direction: column;
+}
+.card_text p {
+  font-weight: 300;
+}
+.tag {
+  display: inline-block;
+  width: fit-content;
+  margin-right: 0.75rem;
+  border-radius: 4px;
+  padding: 0.3rem 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: none;
+  transition: none;
+  color: var(--onprimary);
+  text-transform: uppercase;
+}
+.card_img {
+  width: 100%;
 }
 /* desktop */
 @media (min-width: 62em) {
@@ -628,5 +658,27 @@ footer {
   }
   .info img {
     margin: 3rem 3rem;
+  }
+  /* works */
+  .card {
+    flex-direction: row;
+    padding: 2.5rem 3rem;
+    align-items: center;
+    gap: 3rem;
+  }
+  .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .card_text {
+    gap: 3rem;
+  }
+  .card_text p {
+    max-width: 25rem;
+  }
+  .card_img {
+    display: flex;
+    align-items: center;
+    width: auto;
+    max-height: 21rem;
   }
 }
