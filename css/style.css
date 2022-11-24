@@ -13,6 +13,7 @@
   --field: #25233a;
   --smooth: all 0.3s ease-in;
   --switch-transform: translateX(0px);
+  --body-weight: 300;
 }
 .light-theme {
   --primary: #3db20f;
@@ -21,9 +22,10 @@
   --onbg: #020216;
   --surface: #f4f3fa;
   --onsurface: #25233a;
-  --field: #e0e0ef;
+  --field: #d1d1e5;
   --smooth: all 0.3s ease-in;
   --switch-transform: translateX(24px);
+  --body-weight: 600;
 }
 html {
   scroll-behavior: smooth;
@@ -40,6 +42,11 @@ h1 {
   line-height: 3.75rem;
   letter-spacing: -0.5px;
 }
+h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 3rem;
+}
 h3 {
   font-size: 1.75rem;
   font-weight: 600;
@@ -47,7 +54,7 @@ h3 {
 }
 p {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: var(--body-weight);
   line-height: 1.25rem;
   letter-spacing: 0.5px;
 }
@@ -440,8 +447,53 @@ footer {
 .content {
   position: relative;
   height: 100vh;
+  padding-top: 9rem;
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+.tittle {
+  top: 9rem;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
+  color: var(--onsurface);
+  gap: 1.25rem;
+}
+.rectangle {
+  height: 2.75rem;
+  width: 4px;
+  background-color: var(--primary);
+}
+/* About me */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+  justify-content: center;
+}
+.info p {
+  color: var(--onbg);
+  text-align: left;
+}
+/* Works */
+.work_cards {
+  position: relative;
+  max-width: 1040px;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.25rem;
+}
+.card {
+  display: block;
+  width: 54rem;
+  height: 22.5rem;
+  background: #7930b1;
 }
 /* desktop */
 @media (min-width: 62em) {
@@ -451,6 +503,12 @@ footer {
     line-height: 5rem;
     letter-spacing: -1px;
   }
+  h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 3.75rem;
+    letter-spacing: -0.5px;
+  }
   h3 {
     font-size: 2.25rem;
     font-weight: 600;
@@ -458,7 +516,7 @@ footer {
   }
   p {
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: var(--body-weight);
     line-height: 24px;
     letter-spacing: 0.5px;
   }
@@ -516,6 +574,7 @@ footer {
   .footer {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-content: flex-start;
     align-items: center;
     max-width: 1040px;
@@ -558,5 +617,16 @@ footer {
     bottom: 0;
     left: 0;
     background-color: var(--primary);
+  }
+  .rectangle {
+    height: 3rem;
+  }
+  .info {
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    gap: 20rem;
+  }
+  .info img {
+    margin: 3rem 3rem;
   }
 }
