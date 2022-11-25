@@ -137,7 +137,7 @@ header {
   height: 100%;
   background-color: var(--surface);
   z-index: 5;
-  transition: var(--smooth);
+  transition: all 0.3s ease-in-out;
   transform: translateX(100%);
   opacity: 1;
 }
@@ -546,12 +546,11 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 60vh;
-  gap: 1rem;
 }
 .form_block form {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 .form_block input {
   width: 100%;
@@ -570,11 +569,11 @@ footer {
   opacity: 0.54;
   font-weight: 300;
 }
-.textarea {
+textarea {
   width: 100%;
-  min-height: 8rem;
-  resize: both;
+  height: auto;
   overflow: hidden;
+  border: none;
   background-color: var(--field);
   padding: 0.75rem 1rem;
   border-radius: 8px;
@@ -582,15 +581,16 @@ footer {
   font-size: 1rem;
   color: var(--onsurface);
   cursor: text;
+  resize: none;
 }
-.textarea[contenteditable]:empty::before {
-  content: "Message...";
+textarea::placeholder {
   color: var(--onsurface);
   opacity: 0.54;
+  font-weight: 300;
 }
 .form_block button {
   width: 100%;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 }
 .other_addresses {
   display: flex;
@@ -788,15 +788,18 @@ footer {
   }
   .form_block {
     width: 28.75rem;
-    gap: 2.5rem;
   }
   .form_block form {
-    gap: 1rem;
+    gap: 1.25rem;
   }
   .other_addresses {
     gap: 2.5rem;
   }
   .mysocials a {
     font-size: 1rem;
+  }
+  .form_block button {
+    width: fit-content;
+    margin-top: 1.5rem;
   }
 }

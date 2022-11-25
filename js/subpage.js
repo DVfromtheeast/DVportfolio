@@ -37,3 +37,4 @@ slider.onclick = function () {
     localStorage.setItem("theme", "dark");
   }
 };
+// textarea
