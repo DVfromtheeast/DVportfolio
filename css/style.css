@@ -345,14 +345,44 @@ input:checked + .slider:before {
   position: relative;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
   align-items: center;
 }
-.banner_text {
+.banner_img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.5rem;
+}
+.banner_img img {
   position: absolute;
-  max-width: 100%;
-  margin: 4px 16px 4px 0px;
+  max-width: 40rem;
+}
+.banner_img .illustration {
+  animation: MoveUpDown 3s linear infinite;
+}
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.banner_text {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  justify-content: center;
+  width: 100%;
   text-align: left;
-  bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 .banner_text h1 {
   margin-bottom: 20px;
@@ -361,14 +391,6 @@ input:checked + .slider:before {
 .banner_text p {
   margin-bottom: 32px;
   color: var(--onbg);
-}
-.illustration {
-  display: block;
-  position: absolute;
-  margin: 0 auto;
-  width: 100%;
-  top: 6rem;
-  z-index: -1;
 }
 .dec {
   position: absolute;
@@ -613,6 +635,7 @@ textarea::placeholder {
 .mysocials a {
   display: flex;
   flex-direction: row;
+  width: fit-content;
   gap: 0.25rem;
   font-size: 1.25rem;
   text-decoration: none;
@@ -673,11 +696,23 @@ textarea::placeholder {
   .navbar_icon1 {
     display: none;
   }
+  .banner {
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+  .banner_img {
+    margin-top: 0;
+    justify-content: flex-start;
+    height: 65%;
+  }
+  .banner_img img {
+    width: 56%;
+    right: -2rem;
+  }
   .banner_text {
     max-width: 27rem;
     margin: 0;
     text-align: initial;
-    top: 18rem;
   }
   .banner_text h1 {
     margin-bottom: 24px;
@@ -685,11 +720,7 @@ textarea::placeholder {
   .banner_text p {
     margin-bottom: 40px;
   }
-  .illustration {
-    width: 56%;
-    top: 12rem;
-    right: -2rem;
-  }
+
   .dec {
     position: absolute;
     width: 55rem;
