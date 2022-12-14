@@ -52,6 +52,12 @@ h3 {
   font-weight: 600;
   line-height: 2.25rem;
 }
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+}
 p {
   font-size: 1rem;
   font-weight: var(--body-weight);
@@ -515,7 +521,7 @@ footer {
   color: var(--onbg);
   text-align: left;
 }
-/* Work */
+/* Works */
 .work_categories {
   position: relative;
   max-width: 100%;
@@ -523,15 +529,21 @@ footer {
   grid-template-columns: auto auto;
   column-gap: 1rem;
   row-gap: 1rem;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-items: center;
+  align-items: start;
 }
 .category {
-  height: 12 rem;
   border-radius: 8px;
   padding: 0 0 1.25rem 0;
   color: var(--onprimary);
   background-color: var(--field);
+}
+.category a {
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
 }
 .category_img {
   width: 100%;
@@ -539,19 +551,13 @@ footer {
 .category_text {
   display: block;
   margin: 0 1rem 0 1rem;
-  width: 9.25rem;
-  height: 2.5rem;
+  width: 9.5rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   color: var(--onsurface);
 }
-.category a {
-  gap: 0.75rem;
-  flex-direction: column;
-  display: flex;
-  align-items: flex-start;
-  text-decoration: none;
-}
+
 /* Projects */
 .work_cards {
   position: relative;
@@ -708,6 +714,10 @@ textarea::placeholder {
     font-weight: 600;
     line-height: 3rem;
   }
+  h4 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
   p {
     font-size: 1.25rem;
     font-weight: var(--body-weight);
@@ -834,7 +844,24 @@ textarea::placeholder {
   .info img {
     margin: 3rem 3rem;
   }
-  /* works */
+  /* Works */
+  .work_categories {
+    grid-template-columns: auto auto auto;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+  }
+  .category {
+    padding: 0 0 2rem 0;
+  }
+  .category a {
+    gap: 1rem;
+  }
+  .category_text {
+    margin: 0 2rem 0 2rem;
+    width: 15.75rem;
+    height: 4.5rem;
+  }
+  /* Projects*/
   .card {
     flex-direction: row;
     padding: 2.5rem 3rem;
