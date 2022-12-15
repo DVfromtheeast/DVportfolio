@@ -14,6 +14,7 @@
   --smooth: all 0.3s ease-in;
   --switch-transform: translateX(0px);
   --body-weight: 300;
+  --h4-weight: 600;
 }
 .light-theme {
   --primary: #3db20f;
@@ -25,7 +26,8 @@
   --field: #d1d1e5;
   --smooth: all 0.3s ease-in;
   --switch-transform: translateX(24px);
-  --body-weight: 600;
+  --body-weight: 500;
+  --h4-weight: 600;
 }
 html {
   scroll-behavior: smooth;
@@ -54,7 +56,7 @@ h3 {
 }
 h4 {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: var(--h4-weight);
   line-height: 1.5rem;
   letter-spacing: 0.15px;
 }
@@ -537,6 +539,10 @@ footer {
   padding: 0 0 1.25rem 0;
   color: var(--onprimary);
   background-color: var(--field);
+}
+.category:hover {
+  transform: translateY(-0.75rem);
+  transition: var(--smooth);
 }
 .category a {
   display: flex;
