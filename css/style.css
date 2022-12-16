@@ -572,17 +572,17 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.25rem;
+  gap: 1.5rem;
 }
 .card {
   display: flex;
   width: 100%;
   height: fit-content;
   border-radius: 8px;
-  padding: 2rem 1.5rem;
+  padding: 0rem 1.5rem 2rem 1.5rem;
   align-items: flex-start;
   color: var(--onprimary);
-  gap: 1.25rem;
+  gap: 1rem;
   flex-direction: column-reverse;
 }
 .card_text {
@@ -881,7 +881,7 @@ textarea::placeholder {
   /* Projects*/
   .card {
     flex-direction: row;
-    padding: 2.5rem 3rem;
+    padding: 2.5rem 3rem 2.5rem 3rem;
     align-items: center;
     gap: 3rem;
   }
@@ -905,7 +905,7 @@ textarea::placeholder {
     display: flex;
     align-items: center;
     width: auto;
-    max-height: 21rem;
+    max-height: 19rem;
   }
   /* Contact */
   .contact {
