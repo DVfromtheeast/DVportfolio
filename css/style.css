@@ -604,16 +604,16 @@ footer {
   font-weight: 300;
 }
 .tag {
-  display: inline-block;
-  width: fit-content;
+  display: inline-flex;
+}
+.tag p {
   margin-right: 0.75rem;
   border-radius: 4px;
   padding: 0.3rem 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: none;
-  transition: none;
+  background-color: rgba(255, 255, 255, 0.3);
   color: var(--onprimary);
   text-transform: uppercase;
+  width: fit-content;
 }
 .card_img {
   width: 100%;
@@ -897,10 +897,10 @@ textarea::placeholder {
     width: 3.75rem;
   }
   .card_text {
-    margin: 3rem 3rem 3rem 3rem;
+    margin: 3rem 2rem 3rem 2rem;
   }
   .card_text p {
-    max-width: 25rem;
+    max-width: 26rem;
   }
   .card_img {
     display: flex;
