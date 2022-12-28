@@ -607,18 +607,19 @@ footer {
   display: flex;
   gap: 1.25rem;
   flex-direction: column;
-  margin: 0rem 1.5rem 2rem 1.5rem;
+  width: 100%;
+  padding: 0rem 1rem 1.5rem 1rem;
 }
 .card_title {
   display: flex;
   flex-direction: row;
   max-height: 3rem;
-  gap: 0.75rem;
+  gap: 0.5rem;
   justify-content: flex-start;
   align-items: center;
 }
 .card_title img {
-  width: 3rem;
+  width: 2.5rem;
 }
 .card_text p {
   font-weight: 300;
@@ -933,17 +934,18 @@ textarea::placeholder {
     flex-direction: row-reverse;
   }
   .card_text {
-    gap: 3rem;
+    width: auto;
+    gap: 2rem;
   }
   .card_title {
     max-height: 3.75rem;
-    gap: 1.25rem;
+    gap: 1rem;
   }
   .card_title img {
-    width: 3.75rem;
+    width: 3.5rem;
   }
   .card_text {
-    margin: 3rem 2rem 3rem 2rem;
+    padding: 3rem 2.5rem 3rem 2.5rem;
   }
   .card_text p {
     max-width: 26rem;
