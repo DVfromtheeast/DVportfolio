@@ -534,13 +534,20 @@ footer {
 /* About me */
 .info {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6rem;
-  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+.info img {
+  width: 12.5rem;
+  mix-blend-mode: luminosity;
+  border-radius: 8px;
 }
 .info p {
   color: var(--onbg);
   text-align: left;
+  width: 100%;
+  line-height: 1.5rem;
 }
 /* Works */
 .work_categories {
@@ -903,10 +910,11 @@ textarea::placeholder {
   .info {
     flex-wrap: nowrap;
     flex-direction: row-reverse;
-    gap: 20rem;
+    gap: 4.5rem;
+    align-items: flex-start;
   }
   .info img {
-    margin: 3rem 3rem;
+    width: 20rem;
   }
   /* Works */
   .work_categories {
