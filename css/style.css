@@ -910,7 +910,7 @@ textarea::placeholder {
   .info {
     flex-wrap: nowrap;
     flex-direction: row-reverse;
-    gap: 5.5rem;
+    gap: 4.5rem;
     align-items: flex-start;
   }
   .info img {
