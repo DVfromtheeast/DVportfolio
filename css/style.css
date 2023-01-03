@@ -535,19 +535,48 @@ footer {
 .info {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  align-items: center;
+  gap: 1.5rem;
+  align-items: flex-start;
 }
-.info img {
-  width: 12.5rem;
-  mix-blend-mode: luminosity;
+.profilepic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 12rem;
+}
+.profilepic img {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
   border-radius: 8px;
+}
+.profilepic img ::before,
+.profilepic img ::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-width: 0px 0px 2px 2px;
+  border-style: solid;
+  border-color: #3db20f;
+  border-radius: 0px 0px 0px 12px;
+  bottom: 0;
+  left: 0;
+}
+.profilepic img ::before {
+  transform: translateY(-8px);
 }
 .info p {
   color: var(--onbg);
   text-align: left;
-  width: 100%;
-  line-height: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.25px;
+}
+.info a {
+  text-decoration: none;
+  color: var(--primary);
 }
 /* Works */
 .work_categories {
@@ -909,12 +938,21 @@ textarea::placeholder {
   /* About me */
   .info {
     flex-wrap: nowrap;
-    flex-direction: row-reverse;
-    gap: 4.5rem;
+    flex-direction: row;
+    gap: 2.5rem;
     align-items: flex-start;
   }
-  .info img {
-    width: 20rem;
+  /* .profilepic {
+    width: 16rem;
+  }
+  .profilepic img {
+    width: 100%;
+  } */
+  .info p {
+    width: auto;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.5px;
   }
   /* Works */
   .work_categories {
