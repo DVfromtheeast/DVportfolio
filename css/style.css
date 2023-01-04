@@ -540,20 +540,20 @@ footer {
 }
 .profilepic {
   position: relative;
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
   cursor: pointer;
   background: linear-gradient(
       0deg,
-      rgba(61, 178, 15, 0.2),
-      rgba(61, 178, 15, 0.2)
+      rgba(61, 178, 15, 0.1),
+      rgba(61, 178, 15, 0.1)
     ),
     url("Aboutme.png");
   background-size: cover;
   background-repeat: no-repeat;
   mix-blend-mode: normal;
   border-radius: 8px;
-  margin: 1rem;
+  transition: var(--smooth);
 }
 .profilepic_dec {
   position: absolute;
@@ -562,15 +562,36 @@ footer {
   border-width: 0px 0px 3px 3px;
   border-style: solid;
   border-color: var(--primary);
-  border-radius: 0px 0px 0px 12px;
+  border-radius: 0px 0px 0px 10px;
+  transition: var(--smooth);
+  z-index: -1;
 }
 .profilepic_dec:nth-child(1) {
-  bottom: -1rem;
-  left: -1rem;
+  bottom: 0;
+  left: 0;
 }
 .profilepic_dec:nth-child(2) {
   border-width: 3px 3px 0px 0px;
-  border-radius: 0px 12px 0px 0px;
+  border-radius: 0px 10px 0px 0px;
+  top: 0;
+  right: 0;
+}
+.profilepic:active {
+  background: url("Aboutme.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 11rem;
+  height: 11rem;
+  margin: 1rem;
+}
+.profilepic:active .profilepic_dec {
+  z-index: 0;
+}
+.profilepic:active .profilepic_dec:nth-child(1) {
+  bottom: -1rem;
+  left: -1rem;
+}
+.profilepic:active .profilepic_dec:nth-child(2) {
   top: -1rem;
   right: -1rem;
 }
@@ -952,6 +973,20 @@ textarea::placeholder {
     background: url("Aboutme.png");
     background-size: cover;
     background-repeat: no-repeat;
+    width: 15rem;
+    height: 15rem;
+    margin: 1rem;
+  }
+  .profilepic:hover .profilepic_dec {
+    z-index: 0;
+  }
+  .profilepic:hover .profilepic_dec:nth-child(1) {
+    bottom: -1rem;
+    left: -1rem;
+  }
+  .profilepic:hover .profilepic_dec:nth-child(2) {
+    top: -1rem;
+    right: -1rem;
   }
   .info p {
     width: calc(100% - 18.5rem);
