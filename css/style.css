@@ -407,6 +407,7 @@ input:checked + .slider:before {
   right: 0rem;
   opacity: 0.6;
   pointer-events: none;
+  -webkit-touch-callout: none;
   z-index: -2;
 }
 /* carrousel */
@@ -566,6 +567,7 @@ footer {
   border-radius: 0px 0px 0px 10px;
   transition: var(--smooth);
   z-index: -1;
+  opacity: 0;
 }
 .profilepic_dec:nth-child(1) {
   bottom: 0;
@@ -587,6 +589,7 @@ footer {
 }
 .profilepic:active .profilepic_dec {
   z-index: 0;
+  opacity: 1;
 }
 .profilepic:active .profilepic_dec:nth-child(1) {
   bottom: -1rem;
@@ -980,6 +983,7 @@ textarea::placeholder {
   }
   .profilepic:hover .profilepic_dec {
     z-index: 0;
+    opacity: 1;
   }
   .profilepic:hover .profilepic_dec:nth-child(1) {
     bottom: -1rem;
@@ -991,7 +995,7 @@ textarea::placeholder {
   }
   .info p {
     width: calc(100% - 18.5rem);
-    text-align: justify;
+    /* text-align: justify; */
   }
   /* Works */
   .work_categories {
