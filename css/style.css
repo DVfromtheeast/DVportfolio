@@ -406,6 +406,7 @@ input:checked + .slider:before {
   top: 0rem;
   right: 0rem;
   opacity: 0.6;
+  pointer-events: none;
   z-index: -2;
 }
 /* carrousel */
